@@ -1,15 +1,20 @@
 # 2242-APM
 This is a academic group project for the subject SEHH2242.
 
+
 //Interface
 Please enter your account number: 
 
 Enter your PIN:
 
 Main Menu:
+
 1 - View my balance
+
 2 - Withdraw cash
+
 3 - Despoit funds
+
 4 - Exit
 
 Enter a choice:
