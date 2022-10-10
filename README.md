@@ -1,7 +1,7 @@
 # 2242-APM
 This is a academic group project for the subject SEHH2242.
 
-
+--------
 
 //Interface
 
@@ -23,7 +23,7 @@ This is a academic group project for the subject SEHH2242.
 
 //End of Interface
 
-
+--------
 
 //Test Bank account
 
