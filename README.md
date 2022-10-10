@@ -2,7 +2,9 @@
 This is a academic group project for the subject SEHH2242.
 
 
+
 //Interface
+
 Please enter your account number: 
 
 Enter your PIN:
@@ -19,6 +21,7 @@ Main Menu:
 
 Enter a choice:
 //End of Interface
+
 
 
 //Test Bank account
