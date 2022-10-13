@@ -8,7 +8,6 @@ public class ATM
    private Screen screen; // ATM's screen
    private Keypad keypad; // ATM's keypad
    private CashDispenser cashDispenser; // ATM's cash dispenser
-   private DepositSlot depositSlot; // ATM's deposit slot
    private BankDatabase bankDatabase; // account information database
 
    // constants corresponding to main menu options
@@ -25,7 +24,6 @@ public class ATM
       screen = new Screen(); // create screen
       keypad = new Keypad(); // create keypad 
       cashDispenser = new CashDispenser(); // create cash dispenser
-      depositSlot = new DepositSlot(); // create deposit slot
       bankDatabase = new BankDatabase(); // create acct info database
    } // end no-argument ATM constructor
 
