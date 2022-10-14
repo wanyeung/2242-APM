@@ -5,18 +5,46 @@ import java.util.Scanner; // program uses Scanner to obtain user input
 public class Keypad
 {
    private Scanner input; // reads data from the command line
+   private Screen screen;
                          
    // no-argument constructor initializes the Scanner
    public Keypad()
    {
-      input = new Scanner( System.in );    
+	   input = new Scanner( System.in );    
+	   screen = new Screen();
    } // end no-argument Keypad constructor
 
+  
    // return an integer value entered by user 
    public int getInput()
    {
-      return input.nextInt(); // we assume that user enters an integer  
+	   try {
+		   return input.nextInt(); // we assume that user enters an integer  
+	   }
+      catch (Exception e) {
+		   screen.displayMessageLine( "\n[Warning] Transaction cancelled due to abnormal behaviours.\n"
+				   + "Please do no enter dots or numbers that are too large.");
+		   System.exit(0);
+		 }
+	   
+	   return input.nextInt();
    } // end method getInput
+   
+// return an double value entered by user 
+   public double getInputDouble()
+   {
+	   try {
+		   return input.nextDouble();
+	   }
+      catch (Exception e) {
+		   screen.displayMessageLine( "\n[Warning] Transaction cancelled due to abnormal behaviours.\n"
+				   + "Please do no enter numbers that are too large, started with dots, or with unnessary dots.");
+		   System.exit(0);
+		 }
+	   
+	   return input.nextDouble();
+   } // end method getInput
+   
 } // end class Keypad  
 
 

@@ -1,17 +1,24 @@
+// Chequeaccount.java
+// Represents a bank saving account
+
 public class SavingAccount extends Account
 {
-    private double Interestrate = 0.001;
-    public SavingAccount(int theAccountNumber, int thePIN, double theAvaliableBalance, double theTotalBalance)
+    private double interestRate = 0.001;
+    
+    public SavingAccount(int theAccountNumber, int thePIN, 
+    		double theAvaliableBalance, double theTotalBalance)
     {
         super(theAccountNumber, thePIN, theAvaliableBalance, theTotalBalance);
     }
-    public double getInterestrate()
+    
+    public double getInterestRate()
     {
-        return Interestrate;
+        return interestRate;
     }
-    public void setInterestrate(double interestrate)
+    
+    public void setInterestRate(double interestRate)
     {
-        this.Interestrate = interestrate;
+        this.interestRate = interestRate;
     }
 }
 

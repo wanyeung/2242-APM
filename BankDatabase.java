@@ -64,6 +64,21 @@ public class BankDatabase
    {
       getAccount( userAccountNumber ).debit( amount );
    } // end method debit
+   
+   public boolean isValidAccount(int currentAccountNumber) {
+	   boolean isValid = false;
+	   
+	// loop through accounts searching for matching account number
+	   for ( Account currentAccount : accounts )
+	      {
+	         // return current account if match found
+	         if ( currentAccount.getAccountNumber() == currentAccountNumber ) {
+	        	 isValid = true;
+	         }
+	        	 
+	      }
+	   return isValid;
+	}
 } // end class BankDatabase
 
 
