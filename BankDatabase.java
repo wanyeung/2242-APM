@@ -8,13 +8,15 @@ public class BankDatabase
    // no-argument BankDatabase constructor initializes accounts
    public BankDatabase()
    {
-      accounts = new Account[ 2 ]; // just 2 accounts for testing
-      accounts[ 0 ] = new Account( 12345, 54321, 1000.0, 1200.0 );
-      accounts[ 1 ] = new Account( 98765, 56789, 200.0, 200.0 );  
+      accounts = new Account[ 4 ]; // just 2 accounts for testing
+      accounts[ 0 ] = new ChequeAccount( 12345, 54321, 1000.0, 1000.0);
+      accounts[ 1 ] = new SavingAccount( 98765, 56789, 200.0, 200.0 ); 
+      accounts[ 2 ] = new SavingAccount( 99999, 66666, 50000.00, 50000.00 ); 
+      accounts[ 3 ] = new SavingAccount( 11111, 22222, 0.00, 0.00 ); 
    } // end no-argument BankDatabase constructor
    
    // retrieve Account object containing specified account number
-   private Account getAccount( int accountNumber )
+   public Account getAccount( int accountNumber )
    {
       // loop through accounts searching for matching account number
       for ( Account currentAccount : accounts )

@@ -1,13 +1,17 @@
 // ATMCaseStudy.java
 // Driver program for the ATM case study
+import javax.swing.JFrame;
 
-public class ATMCaseStudy
+public class ATMCaseStudy extends JFrame
 {
    // main method creates and runs the ATM
    public static void main( String[] args )
    {
-      ATM theATM = new ATM();    
-      theATM.run();
+	  WelcomeFrame welcomeFrame = new WelcomeFrame(new BankDatabase()); // create ATMFrame
+	  welcomeFrame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+	  welcomeFrame.setSize( 700, 500 ); // set frame size
+	  welcomeFrame.setVisible( true ); // display frame
+	  
    } // end main
 } // end class ATMCaseStudy 
 

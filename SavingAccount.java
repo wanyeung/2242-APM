@@ -1,24 +1,35 @@
-// Chequeaccount.java
+// SavingAccount.java
 // Represents a bank saving account
 
 public class SavingAccount extends Account
 {
-    private double interestRate = 0.001;
+    private double interestRateAnnum = 0.001;
     
+    // Saving Account constructor initializes attributes
     public SavingAccount(int theAccountNumber, int thePIN, 
     		double theAvaliableBalance, double theTotalBalance)
     {
         super(theAccountNumber, thePIN, theAvaliableBalance, theTotalBalance);
     }
     
-    public double getInterestRate()
+    // Saving Account constructor initializes attributes with interest rate annum
+    public SavingAccount(int theAccountNumber, int thePIN, 
+    		double theAvaliableBalance, double theTotalBalance, double interestRateAnnum)
     {
-        return interestRate;
+        super(theAccountNumber, thePIN, theAvaliableBalance, theTotalBalance);
+        this.interestRateAnnum = interestRateAnnum;
     }
     
-    public void setInterestRate(double interestRate)
+ 	// returns interest rate for other bank (back office) systems
+    public double getInterestRateAnnum()
     {
-        this.interestRate = interestRate;
+        return interestRateAnnum;
+    }
+
+    // set interest rate for other bank (back office) systems
+    public void setInterestRateAnnum(double interestRateAnnum)
+    {
+        this.interestRateAnnum = interestRateAnnum;
     }
 }
 

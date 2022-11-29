@@ -1,7 +1,7 @@
 // Account.java
 // Represents a bank account
 
-public class Account 
+public abstract class Account 
 {
    private int accountNumber; // account number
    private int pin; // PIN for authentication
@@ -11,7 +11,7 @@ public class Account
    // Account constructor initializes attributes
    public Account( int theAccountNumber, int thePIN, 
       double theAvailableBalance, double theTotalBalance )
-   {
+   { 
       accountNumber = theAccountNumber;
       pin = thePIN;
       availableBalance = theAvailableBalance;
@@ -42,7 +42,8 @@ public class Account
    // credits an amount to the account
    public void credit( double amount )
    {
-      totalBalance += amount; // add to total balance
+	   availableBalance += amount; // add to available balance
+	   totalBalance += amount; // add to total balance
    } // end method credit
 
    // debits an amount from the account

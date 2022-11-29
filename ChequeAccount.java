@@ -1,23 +1,36 @@
-// Chequeaccount.java
+// ChequeAccount.java
 // Represents a bank cheque account
 
 public class ChequeAccount extends Account
 {
-    private int limitpercheque = 10000;
+    private int limitPerCheque = 10000;
     
+    // Cheque Account constructor initializes attributes
     public ChequeAccount(int theAccountNumber, int thePIN, 
-    		double theAvaliableBalance, double theTotalBalance)
+            double theAvaliableBalance, double theTotalBalance)
     {
         super(theAccountNumber, thePIN, theAvaliableBalance, theTotalBalance);
     }
-    
-    public void setChequeaccount(int Limitpercheque)
+ 
+    // Cheque Account constructor initializes attributes with limitPerCheque
+    public ChequeAccount(int theAccountNumber, int thePIN, 
+            double theAvaliableBalance, double theTotalBalance, int limitPerCheque)
     {
-        this.limitpercheque = Limitpercheque;
+        super(theAccountNumber, thePIN, theAvaliableBalance, theTotalBalance);
+        this.limitPerCheque = limitPerCheque;
+    }
+ 
+    
+    // return limit per cheque  for other bank (back office) systems
+    public int getlimitPerCheque()
+    {
+        return limitPerCheque;
     }
     
-    public int getChequeaccount()
+    // set limit per cheque for other bank (back office) systems
+    public void setlimitPerCheque(int limitPerCheque)
     {
-        return limitpercheque;
+        this.limitPerCheque = limitPerCheque;
     }
+    
 }
